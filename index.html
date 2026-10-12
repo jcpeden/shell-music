@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shell's 40th - DJ Brief</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #fafaf8;
+    color: #1a1a1a;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 40px 24px 80px;
+  }
+
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #e0ddd8;
+  }
+
+  header h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  header p {
+    color: #888;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .arc {
+    margin-bottom: 48px;
+  }
+
+  .arc-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #b5533c;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .arc-steps {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .arc-step {
+    background: #fff;
+    border: 1px solid #e0ddd8;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 0.82rem;
+    color: #1a1a1a;
+    white-space: nowrap;
+  }
+
+  .arc-arrow {
+    color: #c8c4be;
+    padding: 0 4px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #e0ddd8;
+  }
+
+  section:last-child {
+    border-bottom: none;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #b5533c;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul li {
+    padding: 7px 0;
+    font-size: 0.92rem;
+    border-bottom: 1px solid #f0ede8;
+    display: flex;
+    gap: 8px;
+  }
+
+  ul li:last-child {
+    border-bottom: none;
+  }
+
+  .artist {
+    font-weight: 600;
+    flex-shrink: 0;
+    min-width: 140px;
+  }
+
+  .tracks {
+    color: #444;
+  }
+
+  .note {
+    color: #999;
+    font-size: 0.84rem;
+    font-style: italic;
+  }
+
+  .callout {
+    background: #f5f2ee;
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 24px;
+  }
+
+  .callout strong {
+    color: #1a1a1a;
+  }
+
+  .must-play {
+    background: #1a1a1a;
+    color: #fafaf8;
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 48px;
+  }
+
+  .must-play .section-label {
+    color: #b5533c;
+    margin-bottom: 6px;
+  }
+
+  .must-play h2 {
+    color: #fafaf8;
+    margin-bottom: 16px;
+  }
+
+  .must-play ol {
+    list-style: none;
+    padding: 0;
+    column-count: 2;
+    column-gap: 40px;
+  }
+
+  .must-play ol li {
+    padding: 5px 0;
+    font-size: 0.88rem;
+    border-bottom: 1px solid #333;
+    break-inside: avoid;
+  }
+
+  .must-play ol li:last-child {
+    border-bottom: none;
+  }
+
+  .must-play .track-artist {
+    color: #999;
+  }
+
+  .karaoke {
+    background: #f5f2ee;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-top: 28px;
+  }
+
+  .karaoke .section-label {
+    margin-bottom: 8px;
+  }
+
+  .karaoke p {
+    font-size: 0.88rem;
+    color: #555;
+  }
+
+  .karaoke strong {
+    color: #1a1a1a;
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.4rem; }
+    .arc-steps { flex-direction: column; align-items: flex-start; }
+    .arc-arrow { transform: rotate(90deg); }
+    .must-play ol { column-count: 1; }
+    .artist { min-width: 120px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Shell's 40th - DJ Brief</h1>
+    <p>A mood board, not a setlist. Use it to understand the person and the room.</p>
+  </header>
+
+  <!-- Evening Arc -->
+  <div class="arc">
+    <div class="arc-label">Evening Arc</div>
+    <div class="arc-steps">
+      <div class="arc-step">80s, Soul &amp; Funk</div>
+      <div class="arc-arrow">&rarr;</div>
+      <div class="arc-step">90s / 00s / 10s Pop</div>
+      <div class="arc-arrow">&rarr;</div>
+      <div class="arc-step">00s R&amp;B - UK</div>
+      <div class="arc-arrow">&rarr;</div>
+      <div class="arc-step">00s R&amp;B - US &amp; Hip-Hop</div>
+      <div class="arc-arrow">&rarr;</div>
+      <div class="arc-step">House / Dance</div>
+      <div class="arc-arrow">&rarr;</div>
+      <div class="arc-step">90s Classics</div>
+      <div class="arc-arrow">&rarr;</div>
+      <div class="arc-step">Karaoke</div>
+    </div>
+  </div>
+
+  <!-- Section 1: Warm 80s, Soul & Funk -->
+  <section>
+    <div class="section-label">Section 1</div>
+    <h2>Warm 80s, Soul &amp; Funk</h2>
+    <ul>
+      <li><span class="artist">Billy Ocean</span><span class="tracks">Love Really Hurts Without You</span></li>
+      <li><span class="artist">Erasure</span><span class="tracks">A Little Respect</span></li>
+      <li><span class="artist">Fleetwood Mac</span><span class="tracks">Everywhere, Dreams, Little Lies</span></li>
+      <li><span class="artist">George Michael</span><span class="tracks">Careless Whisper, Faith</span></li>
+      <li><span class="artist">Hozier</span><span class="tracks">I Fall in Love Just a Little</span></li>
+      <li><span class="artist">Jamiroquai</span><span class="tracks">Canned Heat, Little L, Virtual Insanity, Space Cowboy</span></li>
+      <li><span class="artist">Kate Bush</span><span class="tracks">Running Up That Hill, Wuthering Heights</span></li>
+      <li><span class="artist">Leon Bridges</span><span class="tracks">Beyond, Coming Home</span></li>
+      <li><span class="artist">Marvin Gaye</span><span class="tracks">I Heard It Through the Grapevine, Sexual Healing</span></li>
+      <li><span class="artist">Steve Winwood</span><span class="tracks">Higher Love</span></li>
+      <li><span class="artist">Tears for Fears</span><span class="tracks">Everybody Wants to Rule the World</span></li>
+      <li><span class="artist">Tina Turner</span><span class="tracks">What's Love Got to Do with It, Private Dancer</span></li>
+      <li><span class="artist">Tracy Chapman</span><span class="tracks">Fast Car, Open Arms</span></li>
+      <li><span class="artist">Whitney Houston</span><span class="tracks">I Wanna Dance with Somebody, How Will I Know</span></li>
+      <li><span class="artist">Womack &amp; Womack</span><span class="tracks">Teardrops</span></li>
+    </ul>
+  </section>
+
+  <!-- Section 2: 90s/00s/10s Pop -->
+  <section>
+    <div class="section-label">Section 2</div>
+    <h2>90s / 00s / 10s Pop</h2>
+    <ul>
+      <li><span class="artist">Ace of Base</span><span class="tracks">All That She Wants, Don't Turn Around, The Sign, Beautiful Life</span></li>
+      <li><span class="artist">Amy Winehouse</span><span class="tracks">Valerie, Rehab</span></li>
+      <li><span class="artist">Arctic Monkeys</span><span class="tracks">I Bet You Look Good on the Dancefloor</span></li>
+      <li><span class="artist">Ariana Grande</span><span class="tracks">Problem, Into You</span></li>
+      <li><span class="artist">Backstreet Boys</span><span class="tracks">Everybody, I Want It That Way</span></li>
+      <li><span class="artist">Blazin' Squad</span><span class="tracks">Flip Reverse, Love on the Line</span></li>
+      <li><span class="artist">Blue</span><span class="tracks">All Rise, One Love, Too Close</span></li>
+      <li><span class="artist">Britney Spears</span><span class="tracks">Gimme More, My Prerogative, I'm a Slave 4 U</span></li>
+      <li><span class="artist">Carly Rae Jepsen</span><span class="tracks">Call Me Maybe</span></li>
+      <li><span class="artist">Justin Bieber</span><span class="tracks">Love Yourself, Sorry, Despacito</span></li>
+      <li><span class="artist">Clean Bandit</span><span class="tracks">Rather Be, Rockabye, Symphony</span></li>
+      <li><span class="artist">Divinyls</span><span class="tracks">I Touch Myself</span></li>
+      <li><span class="artist">Dua Lipa</span><span class="tracks">Levitating, Don't Start Now, Physical, New Rules, Be the One</span></li>
+      <li><span class="artist">Ed Sheeran</span><span class="tracks">Shape of You, Bad Habits, Shivers</span></li>
+      <li><span class="artist">Girls Aloud</span><span class="tracks">Life Got Cold, Sound of the Underground, Jump, The Promise</span></li>
+      <li><span class="artist">Harry Styles</span><span class="tracks">As It Was, Golden, Watermelon Sugar</span></li>
+      <li><span class="artist">Ke$ha</span><span class="tracks">Tik Tok, Die Young, Take It Off</span></li>
+      <li><span class="artist">Kylie</span><span class="tracks">Get Outta My Way, On a Night Like This, Love at First Sight</span></li>
+      <li><span class="artist">Lady Gaga</span><span class="tracks">Just Dance, Poker Face</span></li>
+      <li><span class="artist">Lizzo</span><span class="tracks">About Damn Time, Good As Hell</span></li>
+      <li><span class="artist">Little Mix</span><span class="tracks">DNA, Shout Out to My Ex</span></li>
+      <li><span class="artist">Madonna</span><span class="tracks">Hung Up, Get Together, 4 Minutes</span></li>
+      <li><span class="artist">Mel C ft. Left Eye</span><span class="tracks">Never Be the Same Again</span></li>
+      <li><span class="artist">Michael Jackson</span><span class="tracks">PYT, Billie Jean, Thriller, Don't Stop 'Til You Get Enough</span></li>
+      <li><span class="artist">Naughty Boy</span><span class="tracks">La La La</span></li>
+      <li><span class="artist">One Direction</span><span class="tracks">Little Things, Story of My Life, Best Song Ever, Kiss You</span></li>
+      <li><span class="artist">P!nk</span><span class="tracks">Get the Party Started, Raise Your Glass</span></li>
+      <li><span class="artist">Peter Andre</span><span class="tracks">Mysterious Girl</span></li>
+      <li><span class="artist">Rita Ora &amp; Liam Payne</span><span class="tracks">For You</span></li>
+      <li><span class="artist">S Club 7</span><span class="tracks">Reach, Don't Stop Movin'</span></li>
+      <li><span class="artist">Spice Girls</span><span class="tracks">Wannabe, 2 Become 1, Spice Up Your Life, Stop, Say You'll Be There</span></li>
+      <li><span class="artist">Sombr</span><span class="tracks">12 to 12</span></li>
+      <li><span class="artist">Sugababes</span><span class="tracks">Freak Like Me, Push the Button</span></li>
+      <li><span class="artist">Take That</span><span class="tracks">Pray, Rule the World, The Flood, These Days, Never Forget</span></li>
+      <li><span class="artist">The Killers</span><span class="tracks">Mr Brightside</span></li>
+      <li><span class="artist">The Veronicas</span><span class="tracks">Untouched</span></li>
+      <li><span class="artist">Mark Ronson / Bruno Mars</span><span class="tracks">Uptown Funk</span></li>
+      <li><span class="artist">The Saturdays</span><span class="tracks">What About Us, Up, Issues, If This Is Love</span></li>
+      <li><span class="artist">Vengaboys</span><span class="tracks">Boom Boom Boom Boom</span></li>
+      <li><span class="artist">Years &amp; Years</span><span class="tracks">King, Shine</span></li>
+      <li><span class="artist">ZAYN</span><span class="tracks">Pillow Talk</span></li>
+      <li><span class="artist">Zara Larsson</span><span class="tracks">Lush Life, I Would Like</span></li>
+    </ul>
+  </section>
+
+  <!-- Section 3: 00s R&B - UK -->
+  <section>
+    <div class="section-label">Section 3</div>
+    <h2>00s R&amp;B - UK</h2>
+    <ul>
+      <li><span class="artist">Artful Dodger</span><span class="tracks">Re-Rewind</span></li>
+      <li><span class="artist">Craig David</span><span class="tracks">Fill Me In, Rewind <span class="note">(classic era)</span></span></li>
+      <li><span class="artist">DJ Luck &amp; MC Neat</span><span class="tracks">A Little Bit of Luck</span></li>
+      <li><span class="artist">Mis-Teeq</span><span class="tracks">Scandalous</span></li>
+    </ul>
+  </section>
+
+  <!-- Section 4: 00s R&B - US & Hip-Hop -->
+  <section>
+    <div class="section-label">Section 4</div>
+    <h2>00s R&amp;B - US &amp; Hip-Hop</h2>
+    <ul>
+      <li><span class="artist">50 Cent</span><span class="tracks">In Da Club, 21 Questions, Candy Shop, Just a Lil Bit</span></li>
+      <li><span class="artist">Alicia Keys &amp; Jay-Z</span><span class="tracks">Empire State of Mind</span></li>
+      <li><span class="artist">Amerie</span><span class="tracks">1 Thing</span></li>
+      <li><span class="artist">Baby Bash</span><span class="tracks">Suga Suga</span></li>
+      <li><span class="artist">Beyonce</span><span class="tracks">Crazy in Love, Naughty Girl, Single Ladies</span></li>
+      <li><span class="artist">Black Eyed Peas</span><span class="tracks">Where Is the Love</span></li>
+      <li><span class="artist">Blu Cantrell</span><span class="tracks">Hit Em Up Style</span></li>
+      <li><span class="artist">Chris Brown</span><span class="tracks">Run It, With You</span></li>
+      <li><span class="artist">Christina Aguilera</span><span class="tracks">Dirrty</span></li>
+      <li><span class="artist">Ciara</span><span class="tracks">1, 2 Step, Goodies</span></li>
+      <li><span class="artist">Destiny's Child</span><span class="tracks">Say My Name, Survivor, Jumpin' Jumpin'</span></li>
+      <li><span class="artist">Drake</span><span class="tracks">Coming Home</span></li>
+      <li><span class="artist">Eve</span><span class="tracks">Let Me Blow Ya Mind (feat. Gwen Stefani), Gangsta Lovin' (feat. Alicia Keys)</span></li>
+      <li><span class="artist">Fatman Scoop</span><span class="tracks">Be Faithful</span></li>
+      <li><span class="artist">Ginuwine</span><span class="tracks">Pony</span></li>
+      <li><span class="artist">Ja Rule / Ashanti</span><span class="tracks">Always On Time, Mesmerize</span></li>
+      <li><span class="artist">Jay-Z</span><span class="tracks">99 Problems, Dirt Off Your Shoulder</span></li>
+      <li><span class="artist">Jennifer Lopez</span><span class="tracks">Ain't It Funny <span class="note">(Murder Remix)</span></span></li>
+      <li><span class="artist">Justin Timberlake</span><span class="tracks">Cry Me a River, Rock Your Body, Senorita, Like I Love You</span></li>
+      <li><span class="artist">Kanye West</span><span class="tracks">Gold Digger</span></li>
+      <li><span class="artist">Kelis</span><span class="tracks">Milkshake</span></li>
+      <li><span class="artist">Mariah Carey ft Jay-Z</span><span class="tracks">Heartbreaker</span></li>
+      <li><span class="artist">Mary J Blige</span><span class="tracks">Family Affair, Real Love</span></li>
+      <li><span class="artist">Missy Elliott</span><span class="tracks">Work It, Get Ur Freak On</span></li>
+      <li><span class="artist">Ne-Yo</span><span class="tracks">So Sick, Miss Independent, Because of You</span></li>
+      <li><span class="artist">Nelly</span><span class="tracks">Hot in Herre, Dilemma, Ride Wit Me</span></li>
+      <li><span class="artist">OutKast</span><span class="tracks">Hey Ya!</span></li>
+      <li><span class="artist">Pharrell</span><span class="tracks">Frontin' (feat. Jay-Z)</span></li>
+      <li><span class="artist">Pussycat Dolls</span><span class="tracks">Don't Cha, Buttons</span></li>
+      <li><span class="artist">Rihanna</span><span class="tracks">Diamonds, Umbrella, SOS, We Found Love</span></li>
+      <li><span class="artist">Sean Paul</span><span class="tracks">Temperature, Get Busy, Like Glue</span></li>
+      <li><span class="artist">Shaggy</span><span class="tracks">It Wasn't Me</span></li>
+      <li><span class="artist">Sisqo</span><span class="tracks">Thong Song</span></li>
+      <li><span class="artist">Snoop Dogg</span><span class="tracks">Drop It Like It's Hot</span></li>
+      <li><span class="artist">TLC</span><span class="tracks">No Scrubs, Waterfalls</span></li>
+      <li><span class="artist">The Weeknd</span><span class="tracks">Blinding Lights, Can't Feel My Face</span></li>
+      <li><span class="artist">Timbaland</span><span class="tracks">The Way I Are, Give It to Me</span></li>
+      <li><span class="artist">Usher</span><span class="tracks">Yeah!, U Remind Me</span></li>
+    </ul>
+  </section>
+
+  <!-- Section 5: House / Dance -->
+  <section>
+    <div class="section-label">Section 5</div>
+    <h2>House / Dance</h2>
+    <ul>
+      <li><span class="artist">Basement Jaxx</span><span class="tracks">Where's Your Head At, Red Alert, Romeo</span></li>
+      <li><span class="artist">Bob Sinclar</span><span class="tracks">Love Generation</span></li>
+      <li><span class="artist">Bodyrox</span><span class="tracks">Yeah Yeah</span></li>
+      <li><span class="artist">Calvin Harris</span><span class="tracks">Sweet Nothing, Summer, We Found Love</span></li>
+      <li><span class="artist">David Guetta</span><span class="tracks">Titanium, She Wolf, Without You</span></li>
+      <li><span class="artist">Disclosure</span><span class="tracks">You &amp; Me, Latch</span></li>
+      <li><span class="artist">Ellie Goulding</span><span class="tracks">Burn, Starry Eyed</span></li>
+      <li><span class="artist">Eric Prydz</span><span class="tracks">Call On Me</span></li>
+      <li><span class="artist">Fred again..</span><span class="tracks">Delilah (pull me out of this), adore u</span></li>
+      <li><span class="artist">Galantis</span><span class="tracks">Love on Me</span></li>
+      <li><span class="artist">HUGEL</span><span class="tracks">I Adore You</span></li>
+      <li><span class="artist">Jax Jones</span><span class="tracks">Breathe</span></li>
+      <li><span class="artist">Joey Negro</span><span class="tracks">Make a Move on Me</span></li>
+      <li><span class="artist">Lana Del Rey</span><span class="tracks">Summertime Sadness <span class="note">(Cedric Gervais Remix)</span></span></li>
+      <li><span class="artist">London Grammar</span><span class="tracks">Hey Now, Baby It's You <span class="note">(house remixes, not originals)</span></span></li>
+      <li><span class="artist">Lost Frequencies</span><span class="tracks">Black Friday, Dive, Where Are You Now</span></li>
+      <li><span class="artist">Martin Solveig</span><span class="tracks">Places, Intoxicated</span></li>
+      <li><span class="artist">RUFUS DU SOL</span><span class="tracks">On My Knees, You Were Right</span></li>
+      <li><span class="artist">Rudimental</span><span class="tracks">Feel the Love, Waiting All Night</span></li>
+      <li><span class="artist">Shapeshifters</span><span class="tracks">Lola's Theme</span></li>
+      <li><span class="artist">Sigala</span><span class="tracks">Lullaby, Came Here for Love</span></li>
+      <li><span class="artist">Sunblock</span><span class="tracks">I'll Be Ready</span></li>
+      <li><span class="artist">Swedish House Mafia</span><span class="tracks">Moth to a Flame</span></li>
+      <li><span class="artist">Ultrabeat</span><span class="tracks">Pretty Green Eyes</span></li>
+    </ul>
+  </section>
+
+  <!-- Section 6: 90s Classics Wind-Down -->
+  <section>
+    <div class="section-label">Section 6</div>
+    <h2>90s Classics</h2>
+    <ul>
+      <li><span class="artist">2Funky2</span><span class="tracks">Brothers &amp; Sisters</span></li>
+      <li><span class="artist">Black Box</span><span class="tracks">Ride on Time</span></li>
+      <li><span class="artist">CeCe Peniston</span><span class="tracks">Finally</span></li>
+      <li><span class="artist">Corona</span><span class="tracks">Rhythm of the Night</span></li>
+      <li><span class="artist">Dee-Lite</span><span class="tracks">Groove Is in the Heart</span></li>
+      <li><span class="artist">Everything but the Girl</span><span class="tracks">Missing <span class="note">(Todd Terry Remix)</span></span></li>
+      <li><span class="artist">Gala</span><span class="tracks">Free From Desire</span></li>
+      <li><span class="artist">Haddaway</span><span class="tracks">What Is Love</span></li>
+      <li><span class="artist">Livin' Joy</span><span class="tracks">Dreamer</span></li>
+      <li><span class="artist">N-Trance</span><span class="tracks">Set U Free</span></li>
+      <li><span class="artist">Robin S</span><span class="tracks">Show Me Love</span></li>
+      <li><span class="artist">Salt-N-Pepa</span><span class="tracks">Push It</span></li>
+    </ul>
+  </section>
+
+  <!-- Absolutely Play These -->
+  <div class="must-play">
+    <div class="section-label">Non-negotiables</div>
+    <h2>Absolutely Play These</h2>
+    <ol>
+      <li>Ain't It Funny <span class="note">(Murder Remix)</span> <span class="track-artist">- Jennifer Lopez</span></li>
+      <li>Despacito <span class="track-artist">- Luis Fonsi / Daddy Yankee / Justin Bieber</span></li>
+      <li>Fill Me In <span class="track-artist">- Craig David</span></li>
+      <li>For You <span class="track-artist">- Rita Ora &amp; Liam Payne</span></li>
+      <li>Get Outta My Way <span class="track-artist">- Kylie</span></li>
+      <li>Heartbreaker <span class="track-artist">- Mariah Carey ft Jay-Z</span></li>
+      <li>I Touch Myself <span class="track-artist">- Divinyls</span></li>
+      <li>Never Be the Same Again <span class="track-artist">- Mel C ft. Left Eye</span></li>
+      <li>Places <span class="track-artist">- Martin Solveig</span></li>
+      <li>Pretty Green Eyes <span class="track-artist">- Ultrabeat</span></li>
+      <li>Running Up That Hill <span class="track-artist">- Kate Bush</span></li>
+      <li>Untouched <span class="track-artist">- The Veronicas</span></li>
+      <li>Wannabe <span class="track-artist">- Spice Girls</span></li>
+      <li>Wuthering Heights <span class="track-artist">- Kate Bush</span></li>
+      <li>Yeah! <span class="track-artist">- Usher</span></li>
+    </ol>
+  </div>
+
+  <p style="margin-top: 32px; color: #888; font-size: 0.9rem; font-style: italic;">Karaoke in the last hour.</p>
+
+</div>
+</body>
+</html>
